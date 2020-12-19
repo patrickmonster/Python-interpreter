@@ -1,0 +1,26 @@
+#-*- coding: utf-8 -*-
+
+'''
+코드 저장
+{ } -> 처리
+'''
+from token import Keyword
+from stack import Stack
+
+
+'''
+메모리 테이블
+메모리 주소 | 토큰 | 
+'''
+class Brace(Stack):
+
+    def __init__(s,token):
+        s.token = token
+
+    #현재 실행데이터 가져옴
+    def getIndex(s):
+        pass
+    
+    #문법데이터
+    def getTokenG(s,str=0,keyword=False):
+        pass

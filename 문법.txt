@@ -1,0 +1,8 @@
+﻿Con_if = "if""("Con0")"Ep0(if)
+Con_if_E = {"if""(" Con0 ")""{" Ep0 "}"}(if(Con0){Ep0})(if)
+Con_while = "while""(" Con0 ")""{" Ep0 "}"(while(Con0){Ep0})
+Con_if_else = Con_if "else""{" Ep1 "}"(if(Con_if){Ep0}else{Ep1}) 
+Con_for = "for""(" Ep0 ";" Con0 ";" Ep1 ")""{" Ep2 "}"(Ep0 while(Con0){Ep1 Ep2})
+Con_nf = "nf""(" Con0 ")""{" Ep0 "}" (if(Con0){Pass}else{Ep0})
+Var_integer = "int" Var ";" (Var2)
+Var_char = "char" Var ";" (Var1)

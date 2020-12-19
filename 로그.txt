@@ -1,0 +1,144 @@
+﻿파일 버퍼 작업완료 - read
+Keyword.TEXT	-1	Con_if
+Keyword.EQUAL	0	=
+Keyword.LBRACE	(1, ['{', '}'])	{
+Count ++ 	1
+Count -- 	0
+Keyword.LPAREN	(3, ['(', ')'])	(
+Count ++ 	1
+Count -- 	0
+Keyword.TEXT	-1	Con_while
+Keyword.EQUAL	0	=
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Con0
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep0
+Keyword.DbQt	(5, ['"'])	"
+Keyword.LPAREN	(3, ['(', ')'])	(
+Count ++ 	1
+Count -- 	0
+Keyword.TEXT	-1	Con_if_else
+Keyword.EQUAL	0	=
+Keyword.TEXT	-1	Con_if
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep1
+Keyword.DbQt	(5, ['"'])	"
+Keyword.LPAREN	(3, ['(', ')'])	(
+Count ++ 	1
+Count -- 	0
+Keyword.TEXT	-1	Con_for
+Keyword.EQUAL	0	=
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep0
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Con0
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep1
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep2
+Keyword.DbQt	(5, ['"'])	"
+Keyword.LPAREN	(3, ['(', ')'])	(
+Count ++ 	1
+Count -- 	0
+정렬시작 : ['"', 'if', '"', '"', '(', '"', 'Con0', '"', ')', '"', '"', '{', '"', 'Ep0', '"', '}', '"']
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Con0
+Keyword.DbQt	(5, ['"'])	"
+Keyword.DbQt	(5, ['"'])	"
+Keyword.TEXT	-1	Ep0
+Keyword.DbQt	(5, ['"'])	"
+정렬시작 : ['if', '(', 'Con0', ')', '{', 'Ep0', '}']
+Keyword.If	0	if
+Keyword.LPAREN	(3, ['(', ')'])	(
+Keyword.LBRACE	(1, ['{', '}'])	{
+정렬시작 : ['while', '(', 'Con0', ')', '{', 'Ep0', '}']
+Keyword.While	0	while
+Keyword.LPAREN	(3, ['(', ')'])	(
+Keyword.LBRACE	(1, ['{', '}'])	{
+정렬시작 : ['if', '(', 'Con_if', ')', '{', 'Ep0', '}', 'else', '{', 'Ep1', '}']
+Keyword.If	0	if
+Keyword.LPAREN	(3, ['(', ')'])	(
+Keyword.LBRACE	(1, ['{', '}'])	{
+Keyword.TEXT	-1	else
+Keyword.LBRACE	(1, ['{', '}'])	{
+정렬시작 : ['Ep0', 'while', '(', 'Con0', ')', '{', 'Ep1', 'Ep2', '}']
+Keyword.TEXT	-1	Ep0
+Keyword.While	0	while
+Keyword.LPAREN	(3, ['(', ')'])	(
+Keyword.LBRACE	(1, ['{', '}'])	{
+정렬시작 : ['Ep1', 'Ep2']
+Keyword.TEXT	-1	Ep1
+Keyword.TEXT	-1	Ep2
+Con_if = {"if""("Con0 ")""{"Ep0 "}"}(if (Con0){Ep0})
+Con_while = "while""("Con0 ")""{"Ep0 "}"(while (Con0){Ep0})
+Con_if_else = Con_if "else""{"Ep1 "}"(if (Con_if){Ep0}else {Ep1})
+Con_for = "for""("Ep0 ";"Con0 ";"Ep1 ")""{"Ep2 "}"(Ep0 while (Con0){Ep1 Ep2 })
+0(<Keyword.TEXT: 1>, 'Con_if')
+1(<Keyword.EQUAL: '='>, 0)
+2(<Keyword.DbQt: '"'>, 'if')
+3(<Keyword.DbQt: '"'>, '(')
+4(<Keyword.TEXT: 1>, 'Con0')
+5(<Keyword.DbQt: '"'>, ')')
+6(<Keyword.DbQt: '"'>, '{')
+7(<Keyword.TEXT: 1>, 'Ep0')
+8(<Keyword.DbQt: '"'>, '}')
+9(<Keyword.If: 'if'>, 0)
+10(<Keyword.LPAREN: '('>, 'Con0')
+11(<Keyword.LBRACE: '{'>, 'Ep0')
+12(<Keyword.LINE: '\n'>, 0)
+13(<Keyword.TEXT: 1>, 'Con_while')
+14(<Keyword.EQUAL: '='>, 0)
+15(<Keyword.DbQt: '"'>, 'while')
+16(<Keyword.DbQt: '"'>, '(')
+17(<Keyword.TEXT: 1>, 'Con0')
+18(<Keyword.DbQt: '"'>, ')')
+19(<Keyword.DbQt: '"'>, '{')
+20(<Keyword.TEXT: 1>, 'Ep0')
+21(<Keyword.DbQt: '"'>, '}')
+22(<Keyword.While: 'while'>, 0)
+23(<Keyword.LPAREN: '('>, 'Con0')
+24(<Keyword.LBRACE: '{'>, 'Ep0')
+25(<Keyword.LINE: '\n'>, 0)
+26(<Keyword.TEXT: 1>, 'Con_if_else')
+27(<Keyword.EQUAL: '='>, 0)
+28(<Keyword.TEXT: 1>, 'Con_if')
+29(<Keyword.DbQt: '"'>, 'else')
+30(<Keyword.DbQt: '"'>, '{')
+31(<Keyword.TEXT: 1>, 'Ep1')
+32(<Keyword.DbQt: '"'>, '}')
+33(<Keyword.If: 'if'>, 0)
+34(<Keyword.LPAREN: '('>, 'Con_if')
+35(<Keyword.LBRACE: '{'>, 'Ep0')
+36(<Keyword.TEXT: 1>, 'else')
+37(<Keyword.LBRACE: '{'>, 'Ep1')
+38(<Keyword.LINE: '\n'>, 0)
+39(<Keyword.TEXT: 1>, 'Con_for')
+40(<Keyword.EQUAL: '='>, 0)
+41(<Keyword.DbQt: '"'>, 'for')
+42(<Keyword.DbQt: '"'>, '(')
+43(<Keyword.TEXT: 1>, 'Ep0')
+44(<Keyword.DbQt: '"'>, ';')
+45(<Keyword.TEXT: 1>, 'Con0')
+46(<Keyword.DbQt: '"'>, ';')
+47(<Keyword.TEXT: 1>, 'Ep1')
+48(<Keyword.DbQt: '"'>, ')')
+49(<Keyword.DbQt: '"'>, '{')
+50(<Keyword.TEXT: 1>, 'Ep2')
+51(<Keyword.DbQt: '"'>, '}')
+52(<Keyword.TEXT: 1>, 'Ep0')
+53(<Keyword.While: 'while'>, 0)
+54(<Keyword.LPAREN: '('>, 'Con0')
+55(<Keyword.TEXT: 1>, 'Ep1')
+56(<Keyword.TEXT: 1>, 'Ep2')
+57(<Keyword.LINE: '\n'>, 0)
+
+Con_if = "if""("Con0 ")""{"Ep0 "}"if (Con0){Ep0}
+Con_while = "while""("Con0 ")""{"Ep0 "}"while (Con0){Ep0}
+Con_if_else = Con_if "else""{"Ep1 "}"if (Con_if){Ep0}else {Ep1}
+Con_for = "for""("Ep0 ";"Con0 ";"Ep1 ")""{"Ep2 "}"Ep0 while (Con0)Ep1 Ep2 
